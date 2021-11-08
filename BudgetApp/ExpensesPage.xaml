@@ -1,0 +1,28 @@
+﻿<Window x:Class="BudgetApp.ExpensesPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BudgetApp"
+        mc:Ignorable="d"
+        Title="ExpensesPage" Height="598.384" Width="576.293" Loaded="ExpensesPage_OnLoaded">
+    <Grid>
+        <DataGrid x:Name="DataGrid" HorizontalAlignment="Left" Height="196" Margin="175,239,0,0" VerticalAlignment="Top" Width="202" FontSize="16">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Expense" Binding="{Binding Key}" Width="110" />
+                <DataGridTextColumn Header="Cost" Binding="{Binding Value}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Your General Expenses" HorizontalAlignment="Left" Margin="175,43,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Button x:Name="btnViewHome"  Content="View Home Loan Costs" HorizontalAlignment="Left" Margin="71,495,0,0" VerticalAlignment="Top" Width="206" Height="28" FontSize="16" Click="btnViewHome_Click"/>
+        <Button x:Name="btnViewVehicle" Content="View Vehicle Loan Costs" HorizontalAlignment="Left" Margin="312,495,0,0" VerticalAlignment="Top" Width="185" Height="28" FontSize="16" Click="btnViewVehicle_Click"/>
+        <Label Content="Expense :" HorizontalAlignment="Left" Margin="139,108,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Monthly Cost : R" HorizontalAlignment="Left" Margin="107,144,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name ="txtName"  HorizontalAlignment="Left" Height="23" Margin="226,107,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.257,0.672"/>
+        <TextBox x:Name="txtCost" HorizontalAlignment="Left" Height="23" Margin="225,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="107,192,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Background="#FF6985FF" Click="btnAdd_Click" />
+        <Button x:Name="btnRemove" Content="Remove" HorizontalAlignment="Left" Margin="210,192,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Background="#FFFF4444"/>
+        <Button  x:Name="btnBack" Content="Go Back" HorizontalAlignment="Left" Margin="28,28,0,0" VerticalAlignment="Top" Width="75" Background="#FFA6F30A" Click="btnBack_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="BudgetApp.HomeLoan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BudgetApp"
+        mc:Ignorable="d"
+        Title="HomeLoan" Height="517.63" Width="474.854" Loaded="HomeLoan_OnLoaded">
+    <Grid>
+        <Label Content="Home Loan Information" HorizontalAlignment="Left" Margin="136,39,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="Purchase Price : R" HorizontalAlignment="Left" Margin="107,177,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="Txtprice" HorizontalAlignment="Left" Height="32" Margin="269,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="16"/>
+
+        <Label Content="Deposit : R" HorizontalAlignment="Left" Margin="156,228,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtDeposit" HorizontalAlignment="Left" Height="32" Margin="269,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="16"/>
+
+        <Label Content="Interest Rate : R" HorizontalAlignment="Left" Margin="121,280,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtInterest" HorizontalAlignment="Left" Height="32" Margin="269,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="16"/>
+
+        <Label Content="Number of Months to Pay: " HorizontalAlignment="Left" Margin="61,330,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtMonths" HorizontalAlignment="Left" Height="32" Margin="269,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="16"/>
+
+        <Label Content="Enter your property information" HorizontalAlignment="Left" Margin="42,120,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="btnBack" Content="Go Back" HorizontalAlignment="Left" Margin="199,412,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Background="#FFFFBF5B"  Height="40" Click="btnBack_Click"/>
+    </Grid>
+</Window>

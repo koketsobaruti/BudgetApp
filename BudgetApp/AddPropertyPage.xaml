@@ -1,0 +1,34 @@
+﻿<Window x:Class="BudgetApp.AddPropertyPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:local="clr-namespace:BudgetApp"
+        mc:Ignorable="d"
+        Title="AddPropertyPage" Height="512.069" Width="537.5">
+    <Grid>
+        <Label Content="Home Loan Information" HorizontalAlignment="Left" Margin="142,48,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="Purchase Price : R" HorizontalAlignment="Left" Margin="124,189,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtPrice" Text="{Binding purchasePrice , ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}"
+                 HorizontalAlignment="Left" Height="32" Margin="285,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="16"/>
+
+        <Label Content="Deposit : R" HorizontalAlignment="Left" Margin="172,240,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtDeposit" Text="{Binding deposit , ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged }"
+                 HorizontalAlignment="Left" Height="32" Margin="285,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="16"/>
+
+        <Label Content="Interest Rate : R" HorizontalAlignment="Left" Margin="138,292,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtInterest" Text="{Binding interest , ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" ToolTip="{Binding ErrorCollection[interest]}"
+                 HorizontalAlignment="Left" Height="32" Margin="285,292,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="16"/>
+
+        <Label Content="Number of Months to Pay: " HorizontalAlignment="Left" Margin="78,342,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="txtMonths" Text="{Binding monthsToPay , ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}" ToolTip="{Binding ErrorCollection[monthsToPay]}"
+                 HorizontalAlignment="Left" Height="32" Margin="285,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" FontSize="16"/>
+
+        <Label Content="Enter your property information" HorizontalAlignment="Left" Margin="48,129,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Button x:Name="btnBack" Content="Go Back" HorizontalAlignment="Left" Margin="137,415,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Background="#FFFFBF5B"  Height="26"/>
+        <Button x:Name="btnDone" Content="Done" HorizontalAlignment="Left" Margin="329,415,0,0" VerticalAlignment="Top" Width="75" FontSize="16" Background="#FF5CD41C" Height="26" Click="btnDone_Click"/>
+        <Label Visibility="Hidden" x:Name="lblmessage" Content="Enter the missing information" HorizontalAlignment="Left" Margin="172,90,0,0" VerticalAlignment="Top" Height="34" Width="228" Foreground="#FFF90C0C" FontSize="16"/>
+
+    </Grid>
+</Window>
